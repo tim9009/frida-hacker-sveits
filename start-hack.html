@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hack Sveits 🇨🇭</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin-top: 0;
+        background: linear-gradient(135deg, #111 0%, #222 100%);
+        color: #39ff14;
+        font-family: 'Consolas', 'Monaco', monospace;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        letter-spacing: 0.5px;
+      }
+      .container {
+        max-width: 400px;
+        margin: 50px auto;
+        background: rgba(20, 20, 20, 0.95);
+        border: 2px solid #39ff14;
+        padding: 40px 30px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+      #startButton {
+        background: transparent;
+        color: #39ff14;
+        border: 2px solid #39ff14;
+        padding: 12px 32px;
+        font-size: 1.1rem;
+        font-family: inherit;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+      #startButton:hover {
+        background: #39ff14;
+        color: #111;
+      }
+      #bgVideo {
+        visibility: hidden;
+      }
+      #canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://i.imgur.com/4Z5z1bH.png') no-repeat center center;
+        background-size: cover;
+        background-color: #111;
+        z-index: -1;
+      }
+      #console {
+        visibility: hidden;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        height: 600px;
+        max-height: 100%;
+        background: rgba(20, 20, 20, 0.8);
+        border: 2px solid #39ff14;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dialogbox" class="container">
+      <h1>Er du sikker på at du vil hacke Sveits?🇨🇭</h1>
+      <button id="startButton">Absolutt! 💀</button>
+    </div>
+
+    <video id="bgVideo" autoplay loop muted playsinline style="position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:-2;">
+      <source id="videoSource" src="https://cdn.pixabay.com/video/2015/08/09/171-135788231_large.mp4" type="video/mp4">
+    </video>
+
+    <div id="console">
+      Her står det noe haha!
+    </div>
+  </body>
+
+  <script>
+    const spinningHead = "https://cdn.pixabay.com/video/2022/05/03/115894-705943388_large.mp4"
+    const blueHead = "https://cdn.pixabay.com/video/2021/04/04/69951-538962240_large.mp4"
+    const terminalManyWindows = "https://cdn.pixabay.com/video/2015/08/09/171-135788231_large.mp4"
+    const videoTwo = "https://cdn.pixabay.com/video/2023/09/13/180459-864245324_large.mp4"
+    const terminalFingerprint = "https://cdn.pixabay.com/video/2020/09/19/50326-460279129_large.mp4"
+    const threeTargets = "https://cdn.pixabay.com/video/2019/12/15/30200-380473759_large.mp4"
+    const satellites = "https://cdn.pixabay.com/video/2017/07/23/10854-226632941_large.mp4"
+    const tracking = "https://cdn.pixabay.com/video/2016/09/21/5361-183788420_medium.mp4"
+    const moneyRain = "https://cdn.pixabay.com/video/2023/11/02/187588-880665640_large.mp4"
+    const videoSignal = "https://cdn.pixabay.com/video/2020/05/03/37946-415263561_large.mp4"
+    const blueFlickerTerminal = "https://cdn.pixabay.com/video/2020/09/09/49470-459459129_large.mp4"
+    const moneyDown = "https://cdn.pixabay.com/video/2020/03/16/33805-398257065_large.mp4"
+
+    document.getElementById('startButton').addEventListener('click', function() {
+      // Display hidden elements
+      document.getElementById('bgVideo').style.visibility = 'visible'
+      document.getElementById('console').style.visibility = 'visible'
+
+      // Hide the dialog box
+      document.getElementById('dialogbox').remove()
+
+      // Start the animation
+      runAnimation()
+    })
+
+    async function runAnimation () {
+      // Screen 1
+      await screenOne()
+
+      // Screen 2
+      await screenTwo()
+
+      // Screen 3
+      await screenThree()
+
+      // Screen 4
+      await screenFour()
+
+      // Screen 5
+      await screenFive()
+
+      // screen 6
+      await screenSix()
+
+      // screen 7
+      await screenSeven()
+
+      // screen 8
+      await screenEight()
+    }
+
+    async function screenOne () {
+      console.log('Screen 1 started')
+
+      // Clear the console
+      const consoleElement = document.getElementById('console')
+      consoleElement.innerHTML = ''
+
+      // Write to console
+      await writeToConsole('HACKER SVEITS\nStarter opp script...\n> sattelite_control.sh\n> acount_scanner.sh\n> fake_id_generator.sh\n')
+
+      // Delay at end of screen
+      await new Promise(resolve => setTimeout(resolve, 500))
+    }
+
+    async function screenTwo () {
+      console.log('Screen 1 started')
+
+      // Clear the console
+      const consoleElement = document.getElementById('console')
+      consoleElement.innerHTML = ''
+
+      console.log('Changing video source to satellites')
+      document.getElementById('bgVideo').src = satellites
+
+      // Write to console
+      await writeToConsole('Leter etter ledig sattelitt\n > Sattelite 1: ERROR\n > Sattelite 2: OK\n\nSattelitt koblet til')
+
+      document.getElementById('bgVideo').src = videoSignal
+
+      // Delay at end of screen
+      await new Promise(resolve => setTimeout(resolve, 2000))
+    }
+
+    async function screenThree () {
+      console.log('Screen 3 started')
+
+      // Clear the console
+      const consoleElement = document.getElementById('console')
+      consoleElement.innerHTML = ''
+
+      // Change video source
+      document.getElementById('bgVideo').src = tracking
+
+      // Write to console
+      await writeToConsole('Analasyrer nettverk\n> Finner tilkobling\n> Finner åpne porter\n> Finner databaser\n> Vurderer mulige angrep\n> Skjuler spor\nPROSESSERER:\n==================== 100%')
+
+      // Delay at end of screen
+      await new Promise(resolve => setTimeout(resolve, 1000))
+    }
+
+    async function screenFour () {
+      console.log('Screen 4 started')
+
+      // Clear the console
+      const consoleElement = document.getElementById('console')
+      consoleElement.innerHTML = ''
+
+      // Change video source
+      document.getElementById('bgVideo').src = threeTargets
+
+      // Write to console
+      await writeToConsole('Analyserer kundelister hos banken\n Plukker ut gamle damer som kan svindles\n👩🏻‍🦳\n👱🏻‍♂️\n👵🏻 <---- MÅL FUNNET!\n🐓\n👵🏾 <---- MÅL FUNNET!\n👴🏻\n🐓\n👶🏻\n👵🏾 <---- MÅL FUNNET!\n\nSamler inn data om mål...')
+
+      // Delay at end of screen
+      await new Promise(resolve => setTimeout(resolve, 1000))
+    }
+
+    async function screenFive () {
+      console.log('Screen 5 started')
+
+      // Clear the console
+      const consoleElement = document.getElementById('console')
+      consoleElement.innerHTML = ''
+
+      // Change video source
+      document.getElementById('bgVideo').src = blueHead
+
+      // Write to console
+      await writeToConsole('Analyserer sosiale medier:\n==================== 100%\nHenter offentlig info:\n==================== 100%')
+
+      // Change video source
+      document.getElementById('bgVideo').src = spinningHead
+
+      // Write to console
+      await writeToConsole('Genrerer falske ID-er\nOlga: OK 🪪\nJarlaug: OK 🪪\nEldbjørg: OK 🪪\nGudveig: OK 🪪\nGerd: OK 🪪')
+
+      // Delay at end of screen
+      await new Promise(resolve => setTimeout(resolve, 1000))
+    }
+
+    async function screenSix () {
+      console.log('Screen 6 started')
+
+      // Clear the console
+      const consoleElement = document.getElementById('console')
+      consoleElement.innerHTML = ''
+
+      // Change video source
+      document.getElementById('bgVideo').src = blueFlickerTerminal
+
+      await writeToConsole('Autentiserer nettbank-API\n> Bank 1: OK\n> Bank 2: OK\n> Bank 3: OK\n')
+
+      // Change video source
+      document.getElementById('bgVideo').src = terminalFingerprint
+
+      // Write to console
+      await writeToConsole('Verifiserer tilgang:\n==================== 100%\nOlga: OK\nJarlaug: OK\nEldbjørg: OK\nGudveig: OK\nGerd: OK')
+
+      // Delay at end of screen
+      await new Promise(resolve => setTimeout(resolve, 1000))
+    }
+
+    async function screenSeven () {
+      console.log('Screen 7 started')
+
+      // Clear the console
+      const consoleElement = document.getElementById('console')
+      consoleElement.innerHTML = ''
+
+      // Change video source
+      document.getElementById('bgVideo').src = moneyDown
+
+      // Write to console
+      await writeToConsole('Tømmer kontoer:\nOlga: ================= 💸\nJarlaug: ============== 💸\nEldbjørg: ============= 💸\nGudveig: ============== 💸\nGerd: ================= 💸')
+
+      // Change video source
+      document.getElementById('bgVideo').src = moneyRain
+
+      // Delay at end of screen
+      await new Promise(resolve => setTimeout(resolve, 2500))
+    }
+
+    async function screenEight () {
+      console.log('Screen 8 started')
+
+      window.location.href = 'https://www.youtube.com/watch?v=xvFZjo5PgG0'
+    }
+
+    async function writeToConsole(text) {
+      const consoleElement = document.getElementById('console')
+
+      // Wirte line by line with a delay
+      for (const line of text.split('\n')) {
+        // Skip empty lines
+        if (line.length === 0) {
+          continue
+        }
+
+        // Open a new line in the console
+        consoleElement.innerHTML += '<div class="line">'
+        for (const char of line)  {
+          consoleElement.innerHTML += char
+          consoleElement.scrollTop = consoleElement.scrollHeight // Scroll to the bottom
+          await new Promise(resolve => setTimeout(resolve, 20)) // Delay between characters
+        }
+        // Close the line
+        consoleElement.innerHTML += '</div>'
+
+        await new Promise(resolve => setTimeout(resolve, 400)) // Delay between lines
+      }
+    }
+  </script>
+</html>
